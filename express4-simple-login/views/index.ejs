@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title><%= title %></title>
+    <% include partials/head %>
+</head>
+
+<body class="container">
+    <header>
+        <% include partials/header %>
+    </header>
+    <main>
+        <div class="jumbotron text-center">
+            <p>Hello!</p>
+            <% if (user) { %>
+                <h1><%= user.username %></h1>
+            <% } %>
+                <h3>Welcome to <%= title %></h3>
+        </div>
+        <% if (!user) { %>
+            <div class="text-center">
+                <a href="/login" class="btn btn-default">Login</a>
+                <a href="/signup" class="btn btn-primary">Signup</a>
+            </div>
+        <% } %>
+    </main>
+    <br />
+    <footer>
+        <% include partials/footer %>
+    </footer>
+</body>
+
+</html>

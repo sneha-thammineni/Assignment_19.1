@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title><%= title %></title>
+    <% include partials/head %>
+</head>
+
+<body class="container login">
+    <main>
+        <div class="panel panel-primary">
+            <div class="panel-heading"><%= title %></div>
+            <div class="panel-body">
+                <div class="jumbotron">
+                    <form id="" method="POST" action="/login" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" placeholder="Username" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" placeholder="Password" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" placeholder="Email" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="first_name">First Name</label>
+                            <input type="text" name="first_name" placeholder="First Name" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" name="last_name" placeholder="Last Name" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-default">Sign Up</button>
+                            <a href="/login" class="btn btn-primary">Need to Login ?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <br />
+    <footer>
+        <% include partials/footer %>
+    </footer>
+</body>
+
+</html>
